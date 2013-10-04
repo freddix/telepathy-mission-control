@@ -1,11 +1,11 @@
 Summary:	A Telepathy account manager
 Name:		telepathy-mission-control
-Version:	5.15.1
+Version:	5.16.0
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://telepathy.freedesktop.org/releases/telepathy-mission-control/%{name}-%{version}.tar.gz
-# Source0-md5:	a527ba9065f172a716ea7127ded7501d
+# Source0-md5:	736ae9d71028d8e6d95017433c07fa06
 URL:		http://mission-control.sourceforge.net/
 BuildRequires:	NetworkManager-devel
 BuildRequires:	autoconf
