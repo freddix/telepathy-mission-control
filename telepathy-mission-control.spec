@@ -1,11 +1,11 @@
 Summary:	A Telepathy account manager
 Name:		telepathy-mission-control
-Version:	5.16.0
+Version:	5.16.1
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://telepathy.freedesktop.org/releases/telepathy-mission-control/%{name}-%{version}.tar.gz
-# Source0-md5:	736ae9d71028d8e6d95017433c07fa06
+# Source0-md5:	421115a35b9e427807326877f86e7f43
 URL:		http://mission-control.sourceforge.net/
 BuildRequires:	NetworkManager-devel
 BuildRequires:	autoconf
@@ -70,6 +70,8 @@ install -d $RPM_BUILD_ROOT%{_datadir}/{telepathy/{clients,managers},mission-cont
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
