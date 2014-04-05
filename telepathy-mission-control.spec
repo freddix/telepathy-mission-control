@@ -1,7 +1,7 @@
 Summary:	A Telepathy account manager
 Name:		telepathy-mission-control
 Version:	5.16.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://telepathy.freedesktop.org/releases/telepathy-mission-control/%{name}-%{version}.tar.gz
@@ -16,7 +16,6 @@ BuildRequires:	libtool
 BuildRequires:	libxslt-progs
 BuildRequires:	pkg-config
 BuildRequires:	telepathy-glib-devel
-BuildRequires:	upower-devel
 Requires:	%{name}-libs = %{version}-%{release}
 Requires(post,postun):	glib-gio-gsettings
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -60,6 +59,7 @@ mission control API documentation.
 %configure \
 	--disable-schemas-compile	\
 	--disable-static		\
+	--disable-upower		\
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
 
